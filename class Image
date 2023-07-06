@@ -1,0 +1,29 @@
+class Image:
+    def __init__(self, file_name):
+        self.file_name = file_name
+
+    def display(self):
+        print(f"Displaying image: {self.file_name}")
+
+class ImageGallery:
+    def __init__(self):
+        self.images = []
+
+    def add_image(self, image):
+        self.images.append(image)
+
+    def display_gallery(self):
+        print("Image Gallery:")
+        for image in self.images:
+            image.display()
+
+# Example usage
+gallery = ImageGallery()
+
+image1 = Image("image1.jpg")
+image2 = Image("image2.jpg")
+
+gallery.add_image(image1)
+gallery.add_image(image2)
+
+gallery.display_gallery()
